@@ -6,7 +6,7 @@ def limpar_dados(lista):
 
 dados_limpos = limpar_dados(dados_sujos)
 print(dados_limpos)
-    # Retorne uma lista apenas com int ou float
+    
 pass
 def calcular_media () :
     pass
@@ -18,3 +18,23 @@ def obter_extremos () :
     pass
 dados = limpar_dados ( dados_sujos )
 print ( f" Dados processados : { dados }")
+
+dados_limpos = [10, 20, 30, 40, 50, 15, 25]
+
+def calcular_mediana(lista):
+    
+    lista_ordenada = sorted(lista)
+    n = len(lista_ordenada)
+    meio = n // 2
+    
+    
+    if n % 2 != 0:
+      
+        return lista_ordenada[meio]
+    else:
+       
+        return (lista_ordenada[meio - 1] + lista_ordenada[meio]) / 2
+
+resultado = calcular_mediana(dados)
+print(f"Lista ordenada: {sorted(dados)}")
+print(f"Mediana: {resultado}")
