@@ -34,6 +34,28 @@ def limpar_dados(lista):
 
 dados_limpos = limpar_dados(dados_sujos)
 print(dados_limpos)
+    
+
+
+def extremos(lista):
+    minimo = lista[0]
+    maximo = lista[0]
+
+    for valor in lista:
+        if valor < minimo:
+            minimo = valor
+        if valor > maximo:
+            maximo = valor
+
+    return minimo, maximo
+
+dados = [5, 8, 2, 10, 3, 7]
+
+menor, maior = extremos(dados)
+
+print("Mínimo:", menor)
+print("Máximo:", maior)
+
 
 
 
@@ -62,3 +84,4 @@ def calcular_mediana(lista):
 resultado = calcular_mediana(dados)
 print(f"Lista ordenada: {sorted(dados)}")
 print(f"Mediana: {resultado}")
+print("verificado por thayna")
