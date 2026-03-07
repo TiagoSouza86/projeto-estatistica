@@ -1,4 +1,32 @@
+def calcular_varianca(numeros):
+    numero1 = float(input("Insira quatro números: "))
+    numero2 = float(input("Insira quatro números: "))
+    numero3 = float(input("Insira quatro números: "))
+    numero4 = float(input("Insira quatro números: "))
+
+    numeros = [numero1, numero2, numero3, numero4]
+    media = sum(numeros) / len(numeros)
+    varianca = sum((x - media) ** 2 for x in numeros) / len(numeros)
+    return varianca
+
+varianca_calculada = calcular_varianca([])
+print(f"A variância dos números inseridos é: {varianca_calculada}")
+print("Verificado por Thyérrisson")
+
+        
+
+
 dados_sujos = [10 , " erro ", 20 , 30 , 40 , None , 50 , 15 , " falha ", 25]
+
+def calcular_media (lista) :
+    for i in lista:
+        soma = 0
+        termos = 0
+        soma += i
+        termos += 1
+        media = soma / termos
+        return media
+        
    
 def limpar_dados(lista):
     # Retorna apenas se o item for do tipo int ou float
@@ -7,13 +35,7 @@ def limpar_dados(lista):
 dados_limpos = limpar_dados(dados_sujos)
 print(dados_limpos)
     
-pass
-def calcular_media () :
-    pass
-def calcular_mediana () :
-    pass
-def calcular_variancia () :
-    pass
+
 
 def extremos(lista):
     minimo = lista[0]
@@ -34,8 +56,14 @@ menor, maior = extremos(dados)
 print("Mínimo:", menor)
 print("Máximo:", maior)
 
+
+
+
+def obter_extremos () :
+    pass
 dados = limpar_dados ( dados_sujos )
 print ( f" Dados processados : { dados }")
+print("Verificado por:Arthur Franco")
 
 dados_limpos = [10, 20, 30, 40, 50, 15, 25]
 
